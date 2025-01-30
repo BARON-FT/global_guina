@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nous Contacter</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <style>
+    /* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1A237E, #6A1B9A);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+}
+
+/* Hero Section */
+.hero-contact {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #6A1B9A, #D81B60);
+  color: white;
+}
+
+/* Contact Information */
+.contact-info {
+  padding: 50px;
+  text-align: center;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Form */
+.contact-form {
+  padding: 50px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.submit-button {
+  background: linear-gradient(135deg, #FFD700, #D81B60);
+  border: none;
+  padding: 15px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background: linear-gradient(135deg, #D81B60, #FFD700);
+}
+
+  </style>
+  <style>
+    .centered-section {
+        margin: 20px auto;
+        max-width: 800px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Images affichées entièrement */
+    .image-container {
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+      </style>
+      <STyle>
+         .dropdown {
+          position: relative;
+        }
+        .dropdown-btn {
+          background: none;
+          border: none;
+          font: inherit;
+          cursor: pointer;
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: white;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+          z-index: 1000;
+          padding: 10px;
+          min-width: 200px;
+        }
+        .dropdown-content a {
+          display: block;
+          padding: 10px;
+          text-decoration: none;
+          color: #000000;
+        }
+        .dropdown-content a:hover {
+          background-color: #f0f0f0;
+        }
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+       
+      </STyle>
+</head>
+<body>
+
+ <!-- Navigation -->
+ <header class="navbar">
+  <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+  <button class="burger-menu" onclick="toggleMenu()">☰</button>
+  <nav class="nav-links">
+    <a href="index.html" class="nav-item">ACCUEIL</a>
+    <a href="guina_agrobusiness.html" class="nav-item">GUINA AGROBUSINESS</a>
+    <a href="guina_gold.html" class="nav-item">GUINA GOLD</a>
+    <a href="guina_market.html" class="nav-item">GUINA MARKET</a>
+    <a href="guina_motors.html" class="nav-item">GUINA MOTORS</a>
+    <div class="dropdown">
+      <button class="dropdown-btn">AUTRES SERVICES</button>
+      <div class="dropdown-content">
+        <a href="guina_tech.html" class="nav-item">GUINA TECHNOLOGIE</a>
+        <a href="guina_academy.html" class="nav-item">GUINA ACADEMY</a>
+        <a href="guina_energy.html" class="nav-item">GUINA ENERY</a>
+        <a href="guina_events.html" class="nav-item">GUINA EVENTS</a>
+        <a href="guina_logistic.html" class="nav-item">GUINA LOGISTIC</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+  <!-- Section Informations de Contact -->
+  <section class="contact-info">
+    <h2>Nos Informations de Contact</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <img src="images/telephone.png" alt="Téléphone">
+        <h3>Téléphone</h3>
+        <p>+223 66596964</p>
+      </div>
+      <div class="info-card">
+        <img src="images/e-mail contact.png" alt="E-mail">
+        <h3>E-mail</h3>
+        <p><a>globalguina@gmail.com</a></p>
+      </div>
+      <div class="info-card">
+        <img src="images/whatsapp-contact.png" alt="WhatsApp">
+        <h3>WhatsApp</h3>
+        <p><a>+223 93777636</a></p>
+      </div>
+      <div class="info-card">
+        <img src="images/localisation.png" alt="Adresse">
+        <h3>Adresse</h3>
+        <p>Kalaban coura A.C.I - BAMAKO - MALI</p>
+      </div>
+    </div>
+  </section>
+  <script>
+    function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+  </script>
+  <script src="scripts/menu.js"></script>
+  <style>
+    /* Styles de la navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6A1B9A, #1A237E);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #1A237E;
+      position: absolute;
+      top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+      right: 0;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  </style>
+</body>
+</html>

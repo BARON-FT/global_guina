@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUINA EVENTS</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Styles Globaux */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #E3F2FD;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #D81B60, #6A1B9A);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 100px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-item:hover {
+      color: #FFD700;
+    }
+
+    /* Section Hero */
+    .hero-events {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #6A1B9A, #D81B60);
+      color: white;
+    }
+
+    .hero-events h1 {
+      font-size: 3.5em;
+    }
+
+    .hero-events p {
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    /* Section Détails */
+    .events-details {
+      display: flex;
+      gap: 50px;
+      padding: 50px;
+      align-items: center;
+    }
+
+    .events-image img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .events-content {
+      max-width: 600px;
+    }
+
+    .events-content h2 {
+      color: #D81B60;
+      margin-bottom: 10px;
+    }
+
+    .events-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .events-content ul li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .events-content ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #6A1B9A;
+    }
+
+    /* Section Services */
+    .services-section {
+      padding: 50px;
+      text-align: center;
+      background: #FFFFFF;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      max-width: 1200px;
+    }
+
+    .services-section h2 {
+      color: #6A1B9A;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #E3F2FD;
+      border: 1px solid #6A1B9A;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1A237E;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">ACCUEIL</a>
+      <a href="contact.html" class="nav-item">CONTACTEZ-NOUS</a>
+    </nav>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="hero-events">
+    <h1>GUINA EVENTS</h1>
+    <p>Organiser des événements mémorables pour connecter le show-business et les affaires.</p>
+  </section>
+
+  <!-- Section Détails -->
+  <section class="events-details">
+    <div class="events-image">
+      <img src="images/conférence1.jpg" alt="Organisation d'événements">
+    </div>
+    <div class="events-content">
+      <h2>À Propos</h2>
+      <p>Guina Events se spécialise dans l'organisation, la planification et la gestion complète des événements dans le domaine du show-business. Nous transformons vos idées en expériences inoubliables.</p>
+
+      <h2>Nos Services</h2>
+      <ul>
+        <li>Planification de concerts et spectacles.</li>
+        <li>Organisation de conférences professionnelles.</li>
+        <li>Coordination des cérémonies de récompenses.</li>
+        <li>Production audiovisuelle de haute qualité.</li>
+        <li>Gestion complète de la logistique événementielle.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Services en Détails -->
+  <section class="services-section">
+    <h2>Nos Points Forts</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/concert.jpg" alt="Concerts et Spectacles">
+        <h3>Concerts et Spectacles</h3>
+        <p>Planifiez des événements qui captivent votre audience.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/conférence2.png" alt="Conférences">
+        <h3>Conférences Professionnelles</h3>
+        <p>Créez des moments de partage et d'inspiration pour les entreprises.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/cérémonie.JPG" alt="Cérémonies">
+        <h3>Cérémonies de Récompenses</h3>
+        <p>Organisez des soirées prestigieuses pour célébrer vos succès.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="mailto:globalguina@gmail.com">
+        <img src="images/e-mail_icon.png" alt="e-mail">
+      </a>
+      <a href="https://wa.me/22393777636">
+        <img src="images/whatsapp_icon.png" alt="WhatsApp">
+      </a>
+      <p>© 2024 - global guina</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+  </script>
+  <style>
+    /* Styles de la navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6A1B9A, #1A237E);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #1A237E;
+      position: absolute;
+      top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+      right: 0;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  </style>
+</body>
+</html>

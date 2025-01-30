@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLOBAL GUINA - Accueil</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+  <script src="scripts/recherche.js"></script>
+  <script src="scripts/menu.js"></script>
+  <style>
+.centered-section {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Images affichées entièrement */
+.image-container {
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+  </style>
+  <STyle>
+     .dropdown {
+      position: relative;
+    }
+    .dropdown-btn {
+      background: none;
+      border: none;
+      font: inherit;
+      cursor: pointer;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      z-index: 1000;
+      padding: 10px;
+      min-width: 200px;
+    }
+    .dropdown-content a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #000000;
+    }
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+   
+  </STyle>
+  
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">ACCUEIL</a>
+      <a href="guina_agrobusiness.html" class="nav-item">GUINA AGROBUSINESS</a>
+      <a href="guina_gold.html" class="nav-item">GUINA GOLD</a>
+      <a href="guina_market.html" class="nav-item">GUINA MARKET</a>
+      <a href="guina_motors.html" class="nav-item">GUINA MOTORS</a>
+      <div class="dropdown">
+        <button class="dropdown-btn">AUTRES SERVICES</button>
+        <div class="dropdown-content">
+          <a href="guina_tech.html" class="nav-item">GUINA TECHNOLOGIE</a>
+          <a href="guina_academy.html" class="nav-item">GUINA ACADEMY</a>
+          <a href="guina_energy.html" class="nav-item">GUINA ENERY</a>
+          <a href="guina_events.html" class="nav-item">GUINA EVENTS</a>
+          <a href="guina_logistic.html" class="nav-item">GUINA LOGISTIC</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+
+ 
+  <!-- Barre de Recherche -->
+  <div class="search-container">
+    <input type="text" id="search-input" placeholder="Rechercher un produit ou service...">
+    <button id="search-button">Rechercher</button>
+  </div>
+  <div id="search-results" class="search-results">
+    <!-- Les résultats de recherche s’afficheront ici -->
+  </div>
+  
+  
+  
+</section>
+
+
+
+  <!-- Section Hero -->
+  <section class="hero">
+    <h2>Bienvenu sur</h2>
+    <h1>GLOBAL GUINA</h1>
+    <p>Des solutions innovantes pour tous vos besoins.</p>
+  </section>
+
+<section class="services-overview">
+<h2>Historique de l'entreprise</h2>
+<H3>Fondation</H3>
+<div class="service-grid">
+  <div class="service-card">
+    <img src="images/GUINA.jpg" alt="logo">
+<H3>Date de création : [ 25-04-2020 ]</H3>
+<H3>Lieu de création : [ Bamako, Mali ]</H3>
+<P>Global Guina a été fondée avec pour mission de rendre la technologie
+  accessible à tous, promouvoir une alimentation durable,
+  aider la terre à nourrir les gens, former des générations 
+  d'entrepreneur et bien d'autres services encore </P>
+</div>
+<div class="service-card">
+  <img src="images/faramon kassogue.jpg" alt="coza">
+  <h3>Fondateur: Faramon kassogue</h3>
+
+</section>
+
+<section class="services-overview">
+  <h2>Les grandes étapes du développement</h2>
+  <div class="service-grid">
+    <div class="service-card">
+  <H3>2020: Lancement officiel</H3>
+  <P>Guina academy (une de nos filliale) encadrants plus de 100 jeunes partout en Afrique chaque année. </P>
+  </div>
+  <div class="service-card">
+    <H3>2021: Croissance rapide</H3>
+    <P>Au niveau de Guina Technology avec la vente et la réparation des ordinateurs et l'installation de
+      réseau de communication associé à la formation des jeunes dans domaine de l'informatique au sein
+      de nôtre académie, grâce à nôtre performance et la maîtrise ont à eu beaucoup de contrat. </P>
+    </div>
+    <div class="service-card">
+      <H3>2022: Diversification</H3>
+      <P> Lancement du nouveau produit le riz, Guina Rice, des jus nature et 
+        d'autres produits naturels cultivés au sein de nôtre filliale Guina Agrobusiness</P>
+      </div>
+      <div class="service-card">
+        <h3>De 2023 jusqu'à nos jours: Une entreprise innovante</h3>
+        <p>Avec un Chiffre d’affaires: 15 Millions</p>
+        <p>L'entreprise compte plus 150 employés et elle influence dans ses différents secteurs</p>
+      </div>
+      <div class="service-card">
+        <h3>Impact et vision d’avenir</h3>
+        <p>Depuis sa création, Global Guina a contribué à la promotion des produits locaux et à la
+          formation des nouveaux jeunes entrepreneurs.
+          L’entreprise continue d’innover avec pour objectif de s’implanter à l’international
+          et de développer des solutions durables</p>       
+      </div>
+      </div>
+  </section>
+  
+
+  <!-- Aperçu des Services -->
+  <section class="services-overview">
+    <h2>Nos Filliales</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="images/guina_agrobusiness.webp" alt="Agrobusiness">
+        <h3>Guina Agrobusiness</h3>
+        <p>Excellence en agriculture moderne et durable.
+        Nous développons une agriculture durable pour un avenir meilleur.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/guina_gold.webp" alt="Gold">
+        <h3>Guina Gold</h3>
+        <p>Exploration et commerce de métaux précieux.
+        Le prestige du commerce de l’or et des métaux précieux.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/guina_market.webp" alt="Market">
+        <h3>Guina Market</h3>
+        <p>Une marketplace innovante pour tous vos achats.
+          La marketplace moderne où vos achats rencontrent l'innovation.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/guina_motor.webp" alt="Motors">
+        <h3>Guina Motors</h3>
+        <p>Vente et maintenance de véhicules
+        Votre partenaire de confiance pour la mobilité de demain.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/guina_tech.webp" alt="Tech">
+        <h3>Guina Technologie</h3>
+        <p>Services technologiques et solutions IT.
+        Nous sommes spécialisé dans la prestation de services tech
+        tel-que: la formation, la vente de PC et accessoire tech.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/formation.webp" alt="Academy">
+        <h3>Guina Academy</h3>
+        <p>Services de formations des jeunes de l'Afrique
+           dans le domaine de l'entrepreunariat et du marketing .</p>
+      </div>
+      <div class="service-card">
+        <img src="images/guina_energy.webp" alt="Energy">
+        <h3>Guina Energy</h3>
+        <p>Un service d’approvisionnement en essence fiable et de haute
+           qualité, conçu pour répondre à vos besoins en mobilité
+            et en performance.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/guina_events.webp" alt="Events">
+        <h3>Guina Events</h3>
+        <p>Au cœur du Mali, nous mettons en avant l’art de concevoir
+           et de réaliser des événements mémorables.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/guina_logistict.webp" alt="Logistic">
+        <h3>Guina Logistic</h3>
+        <p>Dans un monde où chaque seconde compte, un service de logistique
+           efficace est la clé pour connecter les ressources,
+           les entreprises et les consommateurs.  </p>
+      </div>
+    </div> 
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="mailto:globalguina@gmail.com">
+        <img src="images/e-mail_icon.png" alt="e-mail">
+      </a>
+      <a href="https://wa.me/22393777636">
+        <img src="images/whatsapp_icon.png" alt="WhatsApp">
+      </a>
+      <p>© 2024 - global guina</p>
+    </div>
+  </footer>
+</body>
+</html>

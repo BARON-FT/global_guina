@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suivi des Commandes</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <style>
+    .order-item {
+  padding: 20px;
+  margin: 10px 0;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.order-item p {
+  margin: 5px 0;
+}
+.logo {
+  height: 100px;
+}
+  </style>
+ <script src="scripts/suivi_des_commandes.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">Accueil</a>
+      <a href="commande.html" class="nav-item">Passer une Commande</a>
+    </nav>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="hero-suivi">
+    <h1>Suivi de vos Commandes</h1>
+    <p>Consultez l’historique de vos achats.</p>
+  </section>
+
+  <!-- Historique des Commandes -->
+  <section class="order-history" id="order-history">
+    <h2>Vos Commandes</h2>
+    <div id="order-list">
+      <!-- Les commandes seront chargées ici via JavaScript -->
+    </div>
+  </section>
+
+  <script src="scripts/suivi_commande.js"></script>
+  <script>
+    function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+  </script>
+  <script src="scripts/menu.js"></script>
+  <style>
+    .centered-section {
+        margin: 20px auto;
+        max-width: 800px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Images affichées entièrement */
+    .image-container {
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+        margin-bottom: 15px;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+      </style>
+      <STyle>
+         .dropdown {
+          position: relative;
+        }
+        .dropdown-btn {
+          background: none;
+          border: none;
+          font: inherit;
+          cursor: pointer;
+          color: white;
+          display: flex;
+          align-items: center;
+          gap: 5px;
+        }
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: white;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          border-radius: 4px;
+          z-index: 1000;
+          padding: 10px;
+          min-width: 200px;
+        }
+        .dropdown-content a {
+          display: block;
+          padding: 10px;
+          text-decoration: none;
+          color: #000000;
+        }
+        .dropdown-content a:hover {
+          background-color: #f0f0f0;
+        }
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+       
+      </STyle>
+</body>
+</html>

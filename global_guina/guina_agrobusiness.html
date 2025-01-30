@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUINA AGROBUSINESS</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Styles Globaux */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #E3F2FD;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6A1B9A, #1A237E);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #FFD700;
+}
+
+/* Section Hero */
+.hero-agro {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #D81B60, #6A1B9A);
+  color: white;
+}
+
+.hero-agro h1 {
+  font-size: 3.5em;
+}
+
+.hero-agro p {
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+
+/* Section Détails */
+.agro-details {
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+  align-items: center;
+}
+
+.agro-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.agro-content {
+  max-width: 600px;
+}
+
+.agro-content h2 {
+  color: #6A1B9A;
+  margin-bottom: 10px;
+}
+
+.agro-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.agro-content ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  position: relative;
+  padding-left: 20px;
+}
+
+.agro-content ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #D81B60;
+}
+
+/* Bouton d'appel à l'action */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #6A1B9A, #D81B60);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #D81B60, #FFD700);
+}
+
+/* Footer */
+footer {
+  background-color: #1A237E;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .agro-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .agro-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+  </style>
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">ACCEUIL</a>
+      <a href="contact.html" class="nav-item">CONTACTEZ-NOUS</a>
+    </nav>
+  </header>
+
+
+  <!-- Section Hero -->
+  <section class="hero-agro">
+    <h1>GUINA AGROBUSINESS</h1>
+    <p>Nous développons une agriculture durable pour un avenir meilleur.</p>
+  </section>
+
+  <!-- Section Détails du Service -->
+  <section class="agro-details">
+    <div class="agro-image">
+      <img src="images/agriculture.webp" alt="Agriculture moderne">
+    </div>
+    <div class="agro-content">
+      <h2>À Propos</h2>
+      <p>Bienvenue dans le monde de l'agrobusiness,
+         un secteur en pleine expansion où innovation
+         et agriculture se rencontrent pour répondre aux
+         besoins croissants en nourriture et en ressources.
+         Chez guina_agrobusiness, nous sommes passionnés par
+          l'agriculture moderne et durable. Notre mission est
+           de transformer chaque maillon de la chaîne de valeur agricole,
+            de la production à la distribution, pour offrir des solutions
+             qui bénéficient aux agriculteurs, aux consommateurs
+              et à l'environnement.</p>
+       <P>Nous croyons fermement en une agriculture respectueuse
+         de la nature et en des pratiques qui maximisent
+          la productivité tout en minimisant l'impact environnemental.
+           Grâce à des méthodes innovantes et à l'intégration de
+            technologies de pointe, nous visons à rendre l'agriculture
+             plus intelligente, durable et accessible.</P>       
+      <h2>Notre Mission</h2>
+      <p>Chez Guina Agrobusiness, nous nous engageons à promouvoir des pratiques agricoles modernes qui respectent l’environnement, tout en augmentant la productivité et en garantissant la sécurité alimentaire.</p>
+
+      <h2>Nos Activités</h2>
+      <ul>
+        <li>Production et commercialisation de produits agricoles.</li>
+        <li>Formation en techniques agricoles durables.</li>
+        <li>Accompagnement des producteurs locaux.</li>
+        <li>Investissement dans les technologies agricoles innovantes.</li>
+      </ul>
+
+      <a href="contact.html" class="cta-button">Contactez-nous</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="mailto:globalguina@gmail.com">
+        <img src="images/e-mail_icon.png" alt="e-mail">
+      </a>
+      <a href="https://wa.me/22393777636">
+        <img src="images/whatsapp_icon.png" alt="WhatsApp">
+      </a>
+      <p>© 2024 - global guina</p>
+    </div>
+  </footer>
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+</script>
+<style>
+  /* Styles de la navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6A1B9A, #1A237E);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1A237E;
+    position: absolute;
+    top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+</style>
+</body>
+</html>

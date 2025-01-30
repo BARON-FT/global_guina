@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUINA LOGISTIC</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Styles Globaux */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #E3F2FD;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 100px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-item:hover {
+      color: #FFD600;
+    }
+
+    /* Section Hero */
+    .hero-logistic {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #2E7D32, #66BB6A);
+      color: white;
+    }
+
+    .hero-logistic h1 {
+      font-size: 3.5em;
+    }
+
+    .hero-logistic p {
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    /* Section Détails */
+    .logistic-details {
+      display: flex;
+      gap: 50px;
+      padding: 50px;
+      align-items: center;
+    }
+
+    .logistic-image img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .logistic-content {
+      max-width: 600px;
+    }
+
+    .logistic-content h2 {
+      color: #2E7D32;
+      margin-bottom: 10px;
+    }
+
+    .logistic-content ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .logistic-content ul li {
+      margin-bottom: 10px;
+      font-size: 1.1em;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .logistic-content ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #66BB6A;
+    }
+
+    /* Section Services */
+    .services-section {
+      padding: 50px;
+      text-align: center;
+      background: #FFFFFF;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      max-width: 1200px;
+    }
+
+    .services-section h2 {
+      color: #2E7D32;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #E3F2FD;
+      border: 1px solid #2E7D32;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2E7D32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">ACCUEIL</a>
+      <a href="contact.html" class="nav-item">CONTACTEZ-NOUS</a>
+    </nav>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="hero-logistic">
+    <h1>GUINA LOGISTIC</h1>
+    <p>Faciliter l'import-export, le transit et le transport pour un commerce mondial efficace.</p>
+  </section>
+
+  <!-- Section Détails -->
+  <section class="logistic-details">
+    <div class="logistic-image">
+      <img src="images/logistique-internationale.jpg" alt="Solutions logistiques">
+    </div>
+    <div class="logistic-content">
+      <h2>À Propos</h2>
+      <p>Guina Logistic est votre partenaire de confiance pour toutes vos solutions logistiques. Nous connectons les entreprises aux marchés globaux grâce à des services d'import-export, de transport et de transit fiables.</p>
+
+      <h2>Nos Services</h2>
+      <ul>
+        <li>Gestion de l'import-export pour optimiser les chaînes d'approvisionnement.</li>
+        <li>Solutions de transit rapide et sécurisé.</li>
+        <li>Transport de marchandises par voie terrestre, aérienne et maritime.</li>
+        <li>Entreposage et gestion des stocks.</li>
+        <li>Conseils en logistique pour les entreprises.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Services en Détails -->
+  <section class="services-section">
+    <h2>Nos Solutions Clés</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <img src="images/logistic.jpg" alt="Transport">
+        <h3>Transport</h3>
+        <p>Des solutions de transport adaptées à vos besoins pour connecter les ressources et les entreprises.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/import-export.jpg" alt="Import Export">
+        <h3>Import & Export</h3>
+        <p>Facilitez vos échanges internationaux grâce à une expertise dédiée.</p>
+      </div>
+      <div class="service-card">
+        <img src="images/entreposage.jpg" alt="Entreposage">
+        <h3>Entreposage</h3>
+        <p>Des installations modernes pour le stockage sécurisé de vos marchandises.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+   <!-- Footer -->
+   <footer>
+    <div class="footer-content">
+      <a href="mailto:globalguina@gmail.com">
+        <img src="images/e-mail_icon.png" alt="e-mail">
+      </a>
+      <a href="https://wa.me/22393777636">
+        <img src="images/whatsapp_icon.png" alt="WhatsApp">
+      </a>
+      <p>© 2024 - global guina</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+  </script>
+  <style>
+    /* Styles de la navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6A1B9A, #1A237E);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #1A237E;
+      position: absolute;
+      top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+      right: 0;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  </style>
+</body>
+</html>

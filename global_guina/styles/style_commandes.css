@@ -1,0 +1,107 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1A237E, #6A1B9A);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(135deg, #D81B60, #FFD700);
+  }
+  
+  #online-payment-info {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  /* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1A237E, #6A1B9A);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+  }
+  
+  /* Hero Section */
+  .hero-commande {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #6A1B9A, #D81B60);
+    color: white;
+  }
+  
+  /* Formulaire de Commande */
+  .commande-form {
+    padding: 50px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .submit-button {
+    background: linear-gradient(135deg, #FFD700, #D81B60);
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background: linear-gradient(135deg, #D81B60, #FFD700);
+  }
+  
+  /* Résumé de Commande */
+  .order-summary {
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .order-summary span {
+    font-weight: bold;
+    color: #6A1B9A;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #1A237E;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  

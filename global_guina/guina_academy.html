@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUINA ACADEMY</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    /* Styles Globaux */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #E3F2FD;
+      color: #333;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #6A1B9A, #1A237E);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      height: 100px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-item {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .nav-item:hover {
+      color: #FFD700;
+    }
+
+    /* Section Hero */
+    .hero-academy {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #3F51B5, #1E88E5);
+      color: white;
+    }
+
+    .hero-academy h1 {
+      font-size: 3.5em;
+    }
+
+    .hero-academy p {
+      font-size: 1.2em;
+      opacity: 0.8;
+    }
+
+    /* Section Découverte */
+    .opportunities-section {
+      padding: 50px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      max-width: 1200px;
+      text-align: center;
+    }
+
+    .opportunities-section h2 {
+      color: #1E88E5;
+      margin-bottom: 20px;
+    }
+
+    .opportunities-section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .opportunities-section ul li {
+      background: #E3F2FD;
+      border: 1px solid #1E88E5;
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 300px;
+    }
+
+    /* Section Carrousel */
+    .carousel {
+      margin: 50px auto;
+      max-width: 1200px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 300px;
+      margin: 10px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 20px;
+    }
+
+    .carousel-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .carousel-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .carousel-button {
+      background: #1E88E5;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-button:hover {
+      background: #FFD700;
+    }
+
+    /* Section Services */
+    .services-section {
+      padding: 50px;
+      text-align: center;
+      background: #FFFFFF;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      max-width: 1200px;
+    }
+
+    .services-section h2 {
+      color: #1E88E5;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #E3F2FD;
+      border: 1px solid #1E88E5;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .service-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
+    footer {
+      background-color:#1A237E;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">ACCUEIL</a>
+      <a href="contact.html" class="nav-item">CONTACTEZ-NOUS</a>
+    </nav>
+  </header>
+
+  <!-- Section Hero -->
+  <section class="hero-academy">
+    <h1>GUINA ACADEMY</h1>
+    <p>Former la jeunesse africaine pour un avenir entrepreneurial.</p>
+  </section>
+
+  <!-- Section Découverte d'opportunités -->
+  <section class="opportunities-section">
+    <h2>Découverte d'Opportunités</h2>
+    <ul>
+      <li>
+        <h3>Formation en Entrepreneuriat</h3>
+        <p>Découvrez comment transformer vos idées en projets concrets grâce à nos programmes d'entrepreneuriat.</p>
+      </li>
+      <li>
+        <h3>Marketing Digital</h3>
+        <p>Apprenez les stratégies modernes pour promouvoir votre entreprise dans un monde numérique.</p>
+      </li>
+      <li>
+        <h3>Coaching Personnalisé</h3>
+        <p>Accédez à des sessions de mentorat pour vous guider dans votre parcours professionnel.</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Section Flash Info - Carrousel -->
+  <section class="carousel">
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <img src="images/conférence HA.jpg" alt="Formation 1">
+        <h3>Conférence à l'hôtel de l'amitié (BAMAKO)</h3>
+        <p>Session de participation à une conférence organiser à l'hôtel de l'amitié l'année dernière à Bamako-Mali. Il y'a eu beaucoup d'apprentissage et le nombre de participants s'élèvait à une cinquantaine de personnes.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="images/conférence senegal.jpg" alt="Formation 2">
+        <h3>Conférence entrepreneurial au Senegal</h3>
+        <p>En déhors du Mali et à l'échelle international, Faramon Kassogue le président fondateur de GLOBAL GUINA, organise des formation pour sensibilisé les gens à connaître le pouvoir de l'entrepreneuriat. Cette formation s'est passée au Senegal l'année dernière en 2024 et nous espérons organiser bien d'autres conférences dans d'autres pays.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="images/formation3.jpg" alt="Formation 3">
+        <h3> Formation sur leadership et la Communication</h3>
+        <p>Formation au leadership sur la bonne gestion et les erreurs à ne pas commettre dans le domaine de l'entrepreneuriat et du marketing relationnel. Session reussite avec plus de 20 participants.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="images/récompense.jpg" alt="Formation 4">
+        <h3>Récompense de lauréat 2022 </h3>
+        <p>Au palais des congrets du MALI, lors de la cérémonie des rémise des voitures par la compagnie de marketing relationnel LONGRICH, certains leaders fût attribué des récompense sur le podium.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="images/don de sang.jpg" alt="Formation 5">
+        <h3>Don de sang à l'hôtel AZALAÏ de BAMAKO </h3>
+        <p>Lors de la journée de la lutte contre le sida, un évènement s'est tenu à l'hôtel AZALAÏ de BAMAKO-MALI dans laquelle Faramon Kassogue à participer au don de sang.</p>
+      </div>
+      <div class="carousel-item">
+        <img src="images/formation6.jpg" alt="Formation 6">
+        <h3>Formation en marketing</h3>
+        <p>Formation en marketing et négociation pour les jeunes entrepreneurs qui souhaite démarrer ou qui souhaite renforcer leurs compétences en découvrant de nouvelle stratégies.</p>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button class="carousel-button prev" onclick="moveCarousel(-1)">❮</button>
+      <button class="carousel-button next" onclick="moveCarousel(1)">❯</button>
+    </div>
+  </section>
+
+ <!-- Section Services en Détails -->
+ <section class="services-section">
+  <h2>Nos services d'études à l'étranger</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="images/etudier en chine.jpg" alt="chine etude">
+      <h3>Etudier en CHINE</h3>
+      <p>Bourse d'étude complète et partielle pour les études en chine</p>
+    </div>
+    <div class="service-card">
+      <img src="images/edute à l'étranger 1.jpg" alt="Conférences">
+      <h3>Etude à l'étranger</h3>
+      <p>1ère offre d'étude à l'étranger: choisisser vôtre meilleur université.</p>
+    </div>
+    <div class="service-card">
+      <img src="images/etude à l'étranger 2.jpg" alt="Cérémonies">
+      <h3>Etude à l'étranger</h3>
+      <p>2ème offre d'étude à l'étranger: prennez vôtre carrière en main.</p>
+    </div>
+  </div>
+</section>
+  
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-content">
+      <a href="mailto:globalguina@gmail.com">
+        <img src="images/e-mail_icon.png" alt="e-mail">
+      </a>
+      <a href="https://wa.me/22393777636">
+        <img src="images/whatsapp_icon.png" alt="WhatsApp">
+      </a>
+      <p>© 2024 - global guina</p>
+    </div>
+  </footer>
+
+  <!-- Script Carousel -->
+  <script>
+    let currentIndex = 0;
+const track = document.querySelector('.carousel-track');
+const items = document.querySelectorAll('.carousel-item');
+
+function moveCarousel(direction) {
+  const itemWidth = items[0].offsetWidth + 20; // Largeur + margin
+  currentIndex += direction;
+  if (currentIndex < 0) currentIndex = items.length - 1;
+  if (currentIndex >= items.length) currentIndex = 0;
+  track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+}
+
+  </script>
+  <script>
+    function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  </script>
+  <style>
+    /* Styles de la navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6A1B9A, #1A237E);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #1A237E;
+      position: absolute;
+      top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+      right: 0;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  </style>
+  <style>
+    /* Responsivité pour les opportunités */
+@media (max-width: 1024px) {
+  .opportunities-section {
+    padding: 30px 15px;
+    margin: 20px auto;
+  }
+
+  .opportunities-section h2 {
+    font-size: 2em;
+  }
+
+  .opportunities-section ul {
+    flex-direction: column; /* Passe en mode colonne */
+    gap: 20px; /* Augmente l'espacement entre les éléments */
+  }
+
+  .opportunities-section ul li {
+    max-width: 100%; /* Prend toute la largeur disponible */
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .opportunities-section ul li h3 {
+    font-size: 1.3em; /* Réduit légèrement la taille des titres */
+  }
+
+  .opportunities-section ul li p {
+    font-size: 1em; /* Taille adaptée aux petits écrans */
+  }
+}
+
+@media (max-width: 768px) {
+  .opportunities-section {
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .opportunities-section h2 {
+    font-size: 1.8em;
+  }
+
+  .opportunities-section ul {
+    gap: 15px;
+  }
+
+  .opportunities-section ul li {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .opportunities-section ul li h3 {
+    font-size: 1.1em;
+  }
+
+  .opportunities-section ul li p {
+    font-size: 0.9em;
+  }
+}
+  </style>
+  <style>
+/* Responsivité pour le carrousel */
+@media (max-width: 1024px) {
+  .carousel {
+    margin: 20px auto;
+    max-width: 90%; /* Réduit la largeur du carrousel pour s'adapter */
+  }
+
+  .carousel-track {
+    gap: 15px; /* Ajoute de l'espace entre les éléments */
+  }
+
+  .carousel-item {
+    min-width: 280px; /* Réduit la largeur minimale des items */
+    padding: 15px;
+  }
+
+  .carousel-item img {
+    max-width: 100%; /* S'adapte à la largeur de l'élément parent */
+    height: auto; /* Maintient le ratio de l'image */
+    border-radius: 10px;
+  }
+
+  .carousel-item h3 {
+    font-size: 1.2em; /* Ajuste la taille des titres */
+    margin-top: 10px;
+  }
+
+  .carousel-item p {
+    font-size: 0.9em; /* Réduit la taille des descriptions */
+  }
+
+  .carousel-nav {
+    top: 90%; /* Positionne les boutons sous le carrousel */
+  }
+
+  .carousel-button {
+    padding: 8px 12px; /* Réduit la taille des boutons */
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    margin: 20px auto;
+    max-width: 95%;
+  }
+
+  .carousel-track {
+    gap: 10px;
+  }
+
+  .carousel-item {
+    min-width: 220px; /* Réduction pour les très petits écrans */
+    padding: 10px;
+  }
+
+  .carousel-item img {
+    max-width: 100%;
+  }
+
+  .carousel-item h3 {
+    font-size: 1em;
+  }
+
+  .carousel-item p {
+    font-size: 0.8em;
+  }
+
+  .carousel-nav {
+    top: 95%; /* Positionne les boutons encore plus bas */
+  }
+
+  .carousel-button {
+    padding: 6px 10px; /* Boutons plus compacts */
+    font-size: 0.8em;
+  }
+}
+  </style>
+</body>
+</html>

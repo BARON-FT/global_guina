@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Passer une Commande</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style_commandes.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <script type="module" src="scripts/api.js"></script>
+</head>
+<body>
+
+  <!-- Section Hero -->
+  <section class="hero-commande">
+    <h1>Finalisez votre Commande</h1>
+    <p>Remplissez le formulaire ci-dessous pour confirmer votre achat.</p>
+  </section>
+
+  <!-- Formulaire de Commande -->
+  <section class="commande-form">
+    <h2>Formulaire de Commande</h2>
+    <form id="commande-form">
+      <div class="form-group">
+        <label for="nom">Nom complet</label>
+        <input type="text" id="nom" name="nom" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="telephone">Téléphone</label>
+        <input type="number" id="telephone" name="telephone" required>
+      </div>
+      <div class="form-group">
+        <label for="produit">Choix du Produit</label>
+        <select id="produit" name="produit" required>
+          <option value="">-- Sélectionnez un Produit --</option>
+          <option value="HP laptop">HP laptop</option>
+          <option value="Télévision 4K">Télévision 4K</option>
+          <option value="Toyota Land Cruiser">Toyota Land Cruiser</option>
+          <option value="Tesla Model X">Tesla Model X</option>
+          <option value="IPhone 16 simple">IPhone 16 simple</option>
+          <option value="Longrich pâte dentifrice 200g">Longrich pâte dentifrice 200g</option>
+          <option value="Honda CB500">Honda CB500</option>
+          <option value="Harley Fat Boy">Harley Fat Boy</option>
+          <option value="Lenovo laptop">Lenovo laptop</option>
+          <option value="Imprimante Multifonction">Imprimante Multifonction</option>
+          <option value="Souris Sans Fil">Souris Sans Fil</option>
+          <option value="Écran HD 24 pouces">Écran HD 24 pouces</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="quantite">Quantité</label>
+        <input type="number" id="quantite" name="quantite" min="1" value="1" required>
+      </div>
+      <div class="form-group">
+        <label for="paiement">Moyen de Paiement</label>
+        <select id="paiement" name="paiement" required>
+          <option value="">-- Sélectionnez un Moyen de Paiement --</option>
+          <option value="Orange Money">Orange Money</option>
+          <option value="Moov Money">Moov Money</option>
+          <option value="Wave">Wave</option>
+          <option value="Carte Bancaire">Carte Bancaire</option>
+          <option value="Paiement à la Livraison">Paiement à la Livraison (Zone couverte)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <input type="text" id="message" name="message" required>
+      </div>
+      <button type="submit" class="submit-button">Valider la Commande</button>
+    </form>    
+  </section>
+<script type="module" src="scripts/commande.js"></script>
+  <script type="module">
+    import { createOrder } from './scripts/api.js';
+  
+    // Récupérer le nom du produit depuis l'URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const produitSelectionne = urlParams.get('produit');
+    document.getElementById('produit').value = produitSelectionne || '';
+  
+    // Gérer la soumission du formulaire
+    document.getElementById('commande-form').addEventListener('submit', async (event) => {
+      event.preventDefault();
+  
+      const orderData = {
+        customerName: document.getElementById('nom').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('telephone').value,
+        product: document.getElementById('produit').value,
+        quantity: parseInt(document.getElementById('quantite').value, 10),
+        paymentMethod: document.getElementById('paiement').value,
+        message: document.getElementById('message').value,
+      };
+  
+      const result = await createOrder(orderData);
+      if (result) {
+        alert('Commande enregistrée avec succès !');
+        window.location.href = 'suivi_des_commandes.html';
+      } else {
+        alert('Erreur lors de l\'enregistrement de la commande.');
+      }
+    });
+  </script>
+  <script>
+    async function validerCommande() {
+      const result = await createOrder(orderData);
+      console.log('Réponse backend :', result);
+    }
+    validerCommande(); // Appelez la fonction
+  </script>
+  
+  <script type="module">
+    document.getElementById('commande-form').addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const orderData = {
+    customerName: document.getElementById('nom').value,
+    email: document.getElementById('email').value,
+    phone: document.getElementById('telephone').value,
+    product: document.getElementById('produit').value,
+    quantity: parseInt(document.getElementById('quantite').value, 10),
+    paymentMethod: document.getElementById('paiement').value,
+    message: document.getElementById('message').value,
+  };
+
+  console.log('Données à envoyer :', orderData);
+
+  // Appel à l'API backend
+  const result = await createOrder(orderData);
+  if (result) {
+    alert('Commande enregistrée avec succès !');
+    window.location.href = 'suivi_des_commandes.html';
+  } else {
+    alert('Erreur lors de l\'enregistrement de la commande.');
+  }
+});
+  </script>  
+</body>
+</html>

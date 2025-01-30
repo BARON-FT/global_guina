@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUINA GOLD</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6A1B9A, #1A237E);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #FFD700;
+}
+
+    /* Section Hero - Guina Gold */
+.hero-gold {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #FFD700, #6A1B9A);
+  color: white;
+}
+
+.hero-gold h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+.hero-gold p {
+  font-size: 1.2em;
+  opacity: 0.85;
+}
+
+/* Section Détails - Guina Gold */
+.gold-details {
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+  align-items: center;
+}
+
+.gold-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.gold-content {
+  max-width: 600px;
+}
+
+.gold-content h2 {
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.gold-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gold-content ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  position: relative;
+  padding-left: 25px;
+}
+
+.gold-content ul li::before {
+  content: '💰';
+  position: absolute;
+  left: 0;
+  font-size: 1.2em;
+  color: #FFD700;
+}
+
+/* Bouton d'Appel à l'Action */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #FFD700, #D81B60);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #D81B60, #FFD700);
+}
+
+/* Footer */
+footer {
+  background-color: #1A237E;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .gold-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .gold-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">ACCEUIL</a>
+      <a href="contact.html" class="nav-item">CONTACTEZ-NOUS</a>
+  </header>
+
+
+  <!-- Section Hero -->
+  <section class="hero-gold">
+    <h1>GUINA GOLD</h1>
+    <p>Le prestige du commerce de l’or et des métaux précieux.</p>
+  </section>
+
+  <!-- Section Détails -->
+  <section class="gold-details">
+    <div class="gold-image">
+      <img src="images/barres d'or.webp" alt="Barres d'or">
+    </div>
+    <div class="gold-content">
+      <h2>À Propos</h2>
+      <P>Le commerce de l'or est bien plus qu'une simple transaction :
+         c'est un symbole intemporel de richesse, de prestige et de
+          sécurité. Depuis des siècles, l'or incarne la valeur et la
+           stabilité, traversant les époques et les civilisations comme
+            une richesse durable et universelle.</P>
+       <P>Notre mission est de vous offrir un accès sécurisé à ce métal
+         précieux, en garantissant transparence et qualité.
+          Que vous soyez investisseur, collectionneur, ou simplement
+           passionné par la beauté et la valeur de l'or, nous mettons
+            notre expertise et notre réseau à votre service pour vous
+             accompagner dans vos transactions.</P>
+      <P>Avec le commerce de l’or, saisissez l’opportunité d’investir
+         dans un actif qui allie tradition et sécurité, en participant
+          à une histoire de prestige qui perdure à travers les âges.</P>
+      <h2>Notre Expertise</h2>
+      <p>Guina Gold est un leader dans l’exploitation et le commerce de l’or et des métaux précieux. Nous garantissons des produits de la plus haute qualité, issus de sources certifiées et traités avec transparence.</p>
+
+      <h2>Nos Activités</h2>
+      <ul>
+        <li>Extraction et raffinage de l’or.</li>
+        <li>Vente et investissement dans des métaux précieux.</li>
+        <li>Accompagnement pour l’investissement sécurisé dans l’or.</li>
+        <li>Commerce transparent avec nos partenaires locaux et internationaux.</li>
+      </ul>
+
+      <a href="contact.html" class="cta-button">Contactez-nous</a>
+    </div>
+  </section>
+
+  <section class="gold-details">
+    <div class="gold-image">
+    <img src="images/mine (1).jpg" alt="Stations-service">
+    <img src="images/mine (2).jpg" alt="Stations-service">
+    </div>
+    <div class="gold-content">
+      <h2>La mine d'or</h2>
+      <p>Images de nôtre chantier de mine d'or.</p>
+      </div>
+  </section>
+
+ <!-- Footer -->
+ <footer>
+  <div class="footer-content">
+    <a href="mailto:globalguina@gmail.com">
+      <img src="images/e-mail_icon.png" alt="e-mail">
+    </a>
+    <a href="https://wa.me/22393777636">
+      <img src="images/whatsapp_icon.png" alt="WhatsApp">
+    </a>
+    <p>© 2024 - global guina</p>
+  </div>
+</footer>
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+</script>
+<style>
+  /* Styles de la navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6A1B9A, #1A237E);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1A237E;
+    position: absolute;
+    top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+</style>
+</body>
+</html>

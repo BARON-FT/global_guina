@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUINA TECHNOLOGIE</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <script src="scripts/api.js"></script>
+<style>
+  /* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1A237E, #6A1B9A);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #FFD700;
+}
+
+/* Hero Section */
+.hero-tech {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #6A1B9A, #D81B60);
+  color: white;
+}
+
+.hero-tech h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero-tech p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* Sections Expertise, Mission, Activités */
+.expertise, .mission, .activities {
+  background-color: white;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.activities ul {
+  list-style: none;
+  padding: 0;
+  
+}
+
+.activities li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.activities img {
+  width: 200px;
+  height: 200px;
+  margin-right: 15px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Product Catalog */
+.product-catalog {
+  padding: 50px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.buy-button {
+  background: linear-gradient(135deg, #FFD700, #D81B60);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background: linear-gradient(135deg, #D81B60, #FFD700);
+}
+
+/* Footer */
+footer {
+  background-color: #1A237E;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+<style>
+  /* Section Catalogue de Produits */
+.product-catalog {
+  padding: 50px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.buy-button {
+  background: linear-gradient(135deg, #FFD700, #D81B60);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background: linear-gradient(135deg, #D81B60, #FFD700);
+}
+.product-card img {
+  width: 100%; /* Assure que l'image occupe toute la largeur du conteneur */
+  height: auto; /* Ajuste automatiquement la hauteur pour conserver le ratio */
+  border-radius: 10px;
+  object-fit: contain; /* Affiche l'image entière sans la couper */
+}
+
+</style>
+<script>
+  function acheterProduit(produit) {
+    window.location.href = `commande.html?produit=${encodeURIComponent(produit)}`;
+  }
+</script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+      <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+      <button class="burger-menu" onclick="toggleMenu()">☰</button>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-item">ACCEUIL</a>
+        <a href="suivi_des_commandes.html" class="nav-item">COMMANDES</a>
+        <a href="contact.html"class="nav-item">CONTACTEZ-NOUS</a>
+      </nav>
+    </header>
+
+  <!-- Section Hero -->
+  <section class="hero-tech">
+    <H2>Bienvenu sur</H2>
+    <h1>GUINA TECHNOLOGIE</h1>
+    <p>Des solutions numériques adaptées à tous vos besoins professionnels.</p>
+  </section>
+
+  <!-- Section Expertise -->
+  <section class="expertise">
+    <h2>Notre Expertise</h2>
+    <p>Guina Technologie fournit des services numériques de haute qualité, avec une expertise en conception graphique, formation et maintenance informatique.</p>
+  </section>
+
+  <!-- Section Mission -->
+  <section class="mission">
+    <h2>Notre Mission</h2>
+    <p>Offrir des solutions numériques innovantes et accessibles, et accompagner les entreprises dans leur transformation digitale.</p>
+  </section>
+
+  <!-- Section Activités -->
+  <section class="activities">
+    <h2>Nos Activités</h2>
+    <ul>
+      <li><img src="images/Formation en informatique.jpg" alt="Formation"> <h2>Formation en informatique</h2>
+      <li><img src="images/infographie.webp" alt="Infographie"> <h2>Conception et impréssion d'affiches publicitaire, de flyers et logos</h2></li>
+      <li><img src="images/maintenance.webp" alt="Maintenance"> <h2>Maintenance informatique</h2></li>
+    </ul>
+  </section>
+
+  <!-- Section Catalogue de Produits Informatiques -->
+  <section class="product-catalog">
+    <h2>Produits Informatiques en Vente</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/lenovolaptop.webp" alt="Lenovo laptop">
+        <h3>Lenovo laptop</h3>
+        <p>175 000 FCFA</p>
+        <button onclick="acheterProduit('Lenovo laptop')" class="buy-button">Acheter</button>
+      </div>
+      <div class="product-card">
+        <img src="images/imprimante.jpg" alt="Imprimante">
+        <h3>Imprimante Multifonction'</h3>
+        <p>350 000 FCFA</p>
+        <button onclick="acheterProduit('Imprimante Multifonction')" class="buy-button">Acheter</button>
+      </div>
+      <div class="product-card">
+        <img src="images/mouse.jpg" alt="Souris Sans Fil">
+        <h3>Souris Sans Fil</h3>
+        <p>10 000 FCFA</p>
+        <button onclick="acheterProduit('Souris Sans Fil')" class="buy-button">Acheter</button>
+      </div>
+      <div class="product-card">
+        <img src="images/écran.jpg" alt="Écran HD">
+        <h3>Écran HD 24 pouces</h3>
+        <p>180 000 FCFA</p>
+        <button onclick="acheterProduit('Écran HD 24 pouces')" class="buy-button">Acheter</button>
+      </div>
+    </div>
+  </section>
+
+   <!-- Footer -->
+   <footer>
+    <div class="footer-content">
+      <a href="mailto:globalguina@gmail.com">
+        <img src="images/e-mail_icon.png" alt="e-mail">
+      </a>
+      <a href="https://wa.me/22393777636">
+        <img src="images/whatsapp_icon.png" alt="WhatsApp">
+      </a>
+      <p>© 2024 - global guina</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+  </script>
+  <script src="scripts/menu.js"></script>
+  <style>
+    /* Styles de la navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6A1B9A, #1A237E);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #1A237E;
+      position: absolute;
+      top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+      right: 0;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  </style>
+  <script type="module">
+    import { getProducts } from './scripts/api.js';
+  
+    // Fonction pour afficher les produits
+    async function afficherProduits() {
+      const products = await getProducts();
+      const productContainer = document.getElementById('product-grid');
+      productContainer.innerHTML = ''; // Réinitialiser le contenu
+  
+      products.forEach((product) => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+  
+        productCard.innerHTML = `
+          <img src="${product.imageUrl}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.price} FCFA</p>
+          <button onclick="commanderProduit('${product.name}')">Acheter</button>
+        `;
+  
+        productContainer.appendChild(productCard);
+      });
+    }
+  
+    // Fonction appelée lorsqu'on clique sur "Acheter"
+    function commanderProduit(productName) {
+      window.location.href = `commande.html?produit=${encodeURIComponent(productName)}`;
+    }
+  
+    // Afficher les produits au chargement de la page
+    afficherProduits();
+  </script>  
+</body>
+</html>

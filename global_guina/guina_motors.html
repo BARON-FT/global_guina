@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUINA MOTORS</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <script src="scripts/api.js"></script>
+  <style>
+    /* Styles Globaux */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #F5F5F5;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #1A237E, #6A1B9A);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #FFD700;
+}
+
+/* Section Hero */
+.hero-motors {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #6A1B9A, #D81B60);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-motors h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero-motors p {
+  font-size: 1.2rem;
+  opacity: 0.85;
+}
+
+/* Section Texte (Expertise, Mission, Activités) */
+.expertise, .mission, .activities {
+  background-color: white;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.activities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activities li {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.activities span {
+  margin-right: 10px;
+  color: #D81B60;
+}
+
+/* Section Marques */
+.brands {
+  padding: 50px;
+  text-align: center;
+}
+
+.brand-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.brand-card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.brand-card:hover {
+  transform: scale(1.05);
+}
+
+.brand-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Section Catalogue de Produits */
+.product-catalog {
+  padding: 50px;
+  text-align: center;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.buy-button {
+  background: linear-gradient(135deg, #FFD700, #D81B60);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.buy-button:hover {
+  background: linear-gradient(135deg, #D81B60, #FFD700);
+}
+
+/* Footer */
+footer {
+  background-color: #1A237E;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .brand-grid, .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-motors h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-motors p {
+    font-size: 1rem;
+  }
+}
+
+  </style>
+  <style>
+    .brand-card {
+  width: 150px; /* ajustez en fonction de votre mise en page */
+  padding: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.brand-image {
+  width: 100%;
+  height: 150px; /* hauteur de l'image dans la carte */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* affiche l'image en entier dans le cadre */
+}
+  </style>
+  <script>
+    function acheterProduit(produit) {
+      window.location.href = `commande.html?produit=${encodeURIComponent(produit)}`;
+    }
+  </script>
+</head>
+<body>
+
+   <!-- Navigation -->
+   <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">ACCEUIL</a>
+      <a href="suivi_des_commandes.html" class="nav-item">COMMANDES</a>
+      <a href="contact.html"class="nav-item">CONTACTEZ-NOUS</a>
+    </nav>
+  </header>
+
+
+  <!-- Section Hero -->
+  <section class="hero-motors">
+    <h1>GUINA MOTORS</h1>
+    <p>Votre partenaire de confiance pour la mobilité de demain.</p>
+  </section>
+
+  <!-- Section Expertise -->
+  <section class="expertise">
+    <h2><span>💼</span> Notre Expertise</h2>
+    <p>Nous sélectionnons des marques renommées et assurons un service après-vente de qualité pour garantir la satisfaction de nos clients.</p>
+  </section>
+
+  <!-- Section Mission -->
+  <section class="mission">
+    <h2><span>🎯</span> Notre Mission</h2>
+    <p>Faciliter l’accès à la mobilité pour tous, avec des véhicules adaptés à chaque besoin et un accompagnement professionnel.</p>
+  </section>
+
+  <!-- Section Activités -->
+  <section class="activities">
+    <h2>Nos Activités</h2>
+    <ul>
+      <li><span>🚗</span> Vente de voitures neuves et d’occasion.</li>
+      <li><span>🏍️</span> Vente de motos performantes.</li>
+      <li><span>🔧</span> Maintenance et réparations.</li>
+      <li><span>🚚</span> Livraison et services sur mesure.</li>
+    </ul>
+  </section>
+
+  <!-- Section Marques de Voitures -->
+  <section class="brands">
+    <h2>Nos Marques de Voitures</h2>
+    <div class="brand-grid">
+      <div class="brand-card">
+        <img src="images/toyota.webp" alt="Toyota">
+        <h3>Toyota</h3>
+      </div>
+      <div class="brand-card">
+        <img src="images/Mercedes-Benz.png" alt="Mercedes-Benz">
+        <h3>Mercedes-Benz</h3>
+      </div>
+      <div class="brand-card">
+        <img src="images/tesla.png" alt="Tesla">
+        <h3>Tesla</h3>
+      </div>
+      <div class="brand-card">
+        <img src="images/bmw_logo.png" alt="BMW">
+        <h3>BMW</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Marques de Motos -->
+  <section class="brands">
+    <h2>Nos Marques de Motos</h2>
+    <div class="brand-grid">
+      <div class="brand-card">
+        <img src="images/honda-logo.png" alt="Honda">
+        <h3>Honda</h3>
+      </div>
+      <div class="brand-card">
+        <img src="images/Yamaha-Logo.png" alt="Yamaha">
+        <h3>Yamaha</h3>
+      </div>
+      <div class="brand-card">
+        <img src="images/Ducati-Logo.png" alt="Ducati">
+        <h3>Ducati</h3>
+      </div>
+      <div class="brand-card">
+        <img src="images/harleydavidson_logo.png" alt="Harley-Davidson">
+        <h3>Harley-Davidson</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Catalogue des Véhicules en Vente -->
+  <section class="product-catalog">
+    <h2>Véhicules en Vente</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="images/land-cruiser-2024.webp" alt="Toyota Land Cruiser">
+        <h3>Toyota Land Cruiser</h3>
+        <p>45 000 000 FCFA</p>
+        <button onclick="acheterProduit('Toyota Land Cruiser')" class="buy-button">Acheter</button>
+      </div>
+      <div class="product-card">
+        <img src="images/tesla model x.png" alt="Tesla Model X">
+        <h3>Tesla Model X</h3>
+        <p>75 000 000 FCFA</p>
+        <button onclick="acheterProduit('Tesla Model X')" class="buy-button">Acheter</button>
+      </div>
+      <div class="product-card">
+        <img src="images/honda-cb500.webp" alt="Honda CB500">
+        <h3>Honda CB500</h3>
+        <p>4 500 000 FCFA</p>
+        <button onclick="acheterProduit('Honda CB500')" class="buy-button">Acheter</button>
+      </div>
+      <div class="product-card">
+        <img src="images/harleyfatboy.jpg" alt="Harley Fat Boy">
+        <h3>Harley Fat Boy</h3>
+        <p>9 000 000 FCFA</p>
+        <button onclick="acheterProduit('Harley Fat Boy')" class="buy-button">Acheter</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="mailto:globalguina@gmail.com">
+        <img src="images/e-mail_icon.png" alt="e-mail">
+      </a>
+      <a href="https://wa.me/22393777636">
+        <img src="images/whatsapp_icon.png" alt="WhatsApp">
+      </a>
+      <p>© 2024 - global guina</p>
+    </div>
+  </footer>
+  <script>
+    function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+  </script>
+  <script src="scripts/menu.js"></script>
+  <style>
+    /* Styles de la navigation */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #6A1B9A, #1A237E);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .burger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .nav-item {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  @media (max-width: 768px) {
+    .burger-menu {
+      display: block;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #1A237E;
+      position: absolute;
+      top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+      right: 0;
+      width: 100%;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+  
+  </style>
+  <script type="module">
+    import { getProducts } from './scripts/api.js';
+  
+    // Fonction pour afficher les produits
+    async function afficherProduits() {
+      const products = await getProducts();
+      const productContainer = document.getElementById('product-grid');
+      productContainer.innerHTML = ''; // Réinitialiser le contenu
+  
+      products.forEach((product) => {
+        const productCard = document.createElement('div');
+        productCard.className = 'product-card';
+  
+        productCard.innerHTML = `
+          <img src="${product.imageUrl}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.price} FCFA</p>
+          <button onclick="commanderProduit('${product.name}')">Acheter</button>
+        `;
+  
+        productContainer.appendChild(productCard);
+      });
+    }
+  
+    // Fonction appelée lorsqu'on clique sur "Acheter"
+    function commanderProduit(productName) {
+      window.location.href = `commande.html?produit=${encodeURIComponent(productName)}`;
+    }
+  
+    // Afficher les produits au chargement de la page
+    afficherProduits();
+  </script>  
+</body>
+</html>

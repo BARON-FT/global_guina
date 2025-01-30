@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GUINA ENERGY</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Raleway:wght@600&display=swap" rel="stylesheet">
+  <style>
+    /* Styles Globaux */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #E3F2FD;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6A1B9A, #1A237E);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  height: 100px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-item:hover {
+  color: #FFD700;
+}
+
+/* Section Hero */
+.hero-energy {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #0288D1, #D32F2F);
+  color: white;
+}
+
+.hero-energy h1 {
+  font-size: 3.5em;
+}
+
+.hero-energy p {
+  font-size: 1.2em;
+  opacity: 0.8;
+}
+
+/* Section Détails */
+.energy-details {
+  display: flex;
+  gap: 50px;
+  padding: 50px;
+  align-items: center;
+}
+
+.energy-image img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.energy-content {
+  max-width: 600px;
+}
+
+.energy-content h2 {
+  color: #0288D1;
+  margin-bottom: 10px;
+}
+
+.energy-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.energy-content ul li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  position: relative;
+  padding-left: 20px;
+}
+
+.energy-content ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: #D32F2F;
+}
+
+/* Bouton d'appel à l'action */
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #0288D1, #D32F2F);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: background 0.3s;
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, #D32F2F, #FFD700);
+}
+
+/* Footer */
+footer {
+  background-color: #1A237E;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a img {
+  width: 40px;
+  margin: 0 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .energy-details {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .energy-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+  </style>
+
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <img src="images/guinalogo.png" alt="Logo" class="logo" width="140" height="auto">
+    <button class="burger-menu" onclick="toggleMenu()">☰</button>
+    <nav class="nav-links">
+      <a href="index.html" class="nav-item">ACCEUIL</a>
+      <a href="contact.html" class="nav-item">CONTACTEZ-NOUS</a>
+    </nav>
+  </header>
+
+
+  <!-- Section Hero -->
+  <section class="hero-energy">
+    <h1>GUINA ENERGY</h1>
+    <p>Un approvisionnement fiable pour vos besoins en essence et en carburant de haute qualité.</p>
+  </section>
+
+  <!-- Section Détails du Service -->
+  <section class="energy-details">
+    <div class="energy-image">
+      <img src="images/energy.jpg" alt="Distribution d'essence">
+    </div>
+    <div class="energy-content">
+      <h2>Nos Services</h2>
+      <p>Chez Guina Energy, nous sommes engagés à fournir des carburants de haute qualité qui répondent à vos besoins quotidiens. Nos services sont conçus pour garantir un approvisionnement fiable et durable en énergie.</p>
+      
+      <h2>Ce que nous offrons</h2>
+      <ul>
+        <li>Distribution d'essence de haute qualité.</li>
+        <li>Approvisionnement en carburant pour les entreprises et les particuliers.</li>
+        <li>Solutions énergétiques durables.</li>
+        <li>Stations-service modernes et équipées.</li>
+        <li>Approvisionnement d'huile de moteur.</li>
+      </ul>
+
+      <a href="contact.html" class="cta-button">Contactez-nous</a>
+  </section>
+  <section class="energy-details">
+    <div class="energy-image">
+    <img src="images/guina_energy.jpg" alt="Stations-service">
+    </div>
+    <div class="energy-content">
+      <h2> Stations-service (zone couvert ) </h2>
+      <p>Nous sommes situé dans plusieurs zone géographiques du Mali pour vous approvisionné en essence et en gaz-oil.</p>
+      </div>
+  </section>
+  <section class="energy-details">
+    <div class="energy-image">
+      <img src="images/Camion citerne.jpg" alt="camion citerne">
+      </div>
+      <div class="energy-content">
+        <h2>Importation de nos énergies</h2>
+        <p>Grâce à nos camion citerne, nous faisons l'importation des gaz-oil et de l'essence pour approvisionnée que vous soyez des distributeur ou des particulier qui veulent vendre de l'essence</p>
+        </div>
+  </section>
+  <section class="energy-details">
+    <div class="energy-image">
+      <img src="images/service-essence.jpg" alt="service-essence">
+      </div>
+      <div class="energy-content">
+        <h2>Approvisionnement d'essence</h2>
+        <P>Venez faire le plein de stock dans l'une de nos points de Distribution, vous serez pas deçue. Non seulement elle est moins chère mais aussi elle est de très bonne qualité.</P>
+        </div>
+  </section>
+  <section class="energy-details">
+    <div class="energy-image">
+      <img src="images/service d'huile.jpg" alt="service huile">
+      </div>
+      <div class="energy-content">
+        <h2>Approvisionnement d'huile de moteur</h2>
+        <P>Chez guina_energy, vous aurez droit à changer vos huile de moteur par nos spécialiste mais aussi vous pourrez acheter vos bidon d'huile chez nous; il y'a pour voiture et pour moto.</P>
+        </div>
+  </section>
+ 
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <a href="mailto:globalguina@gmail.com">
+        <img src="images/e-mail_icon.png" alt="e-mail">
+      </a>
+      <a href="https://wa.me/22393777636">
+        <img src="images/whatsapp_icon.png" alt="WhatsApp">
+      </a>
+      <p>© 2024 - global guina</p>
+    </div>
+  </footer>
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+  
+</script>
+<style>
+  /* Styles de la navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6A1B9A, #1A237E);
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.burger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1A237E;
+    position: absolute;
+    top: 70px; /* Ajustez en fonction de la hauteur de l'entête */
+    right: 0;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
+
+</style>
+</body>
+</html>
